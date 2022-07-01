@@ -1,8 +1,10 @@
+import '../css/style.css';
+
 const calendar = document.querySelector('.calendar');
 const total = document.querySelector('.value');
 
 const fetchData = async () => {
-  const data = await fetch('../../data.json');
+  const data = await fetch('../data/data.json');
   const jsonData = await data.json();
   return jsonData;
 };

@@ -21,7 +21,7 @@
   box-sizing: border-box;
 }
 
-body {
+#app {
   display: flex;
   flex-direction: column;
   font-size: 18px;
@@ -30,12 +30,12 @@ body {
   align-items: center;
   background-color: var(--neutral-color_cream);
   min-height: 100vh;
+  padding: 20px;
 }
 
 .main_content {
   display: flex;
   flex-direction: column;
-  padding: 20px;
   width: 100%;
   max-width: 768px;
   gap: 20px;
@@ -118,6 +118,10 @@ body {
   font-weight: var(--font-weight_bold);
 }
 
+.total .last_month {
+  text-align: end;
+}
+
 .medium_brown {
   color: var(--neutral-color_mediun-brown);
 }
@@ -129,6 +133,7 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
+  padding: 10px 0;
 }
 
 .attribution a {
