@@ -3,6 +3,7 @@
 
 /* Vars */
 :root {
+  --hover_color: hsl(10, 100%, 76%);
   --primary-color_soft-red: hsl(10, 79%, 65%);
   --primary-color_cyan: hsl(186, 34%, 60%);
   --neutral-color_dark-brown: hsl(25, 47%, 15%);
@@ -91,7 +92,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  height: 200px;
+  min-height: 200px;
   width: calc(100% / 7);
   gap: 8px;
 }
@@ -103,6 +104,7 @@
   width: 100%;
   min-width: 25px;
   max-width: 60px;
+  cursor: pointer;
 }
 
 .total {
@@ -130,6 +132,30 @@
   font-size: 25px;
 }
 
+.graph_value {
+  background-color: var(--neutral-color_dark-brown);
+  color: var(--neutral-color_very-pale-orange);
+  padding: 4px;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  max-width: 70px;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.active {
+  background-color: var(--hover_color) !important;
+}
+
+
+.is_clicked {
+  background-color: var(--primary-color_cyan) !important;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -139,6 +165,7 @@
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
 
 /* Media Queries */
 @media(max-width: 768px) {
