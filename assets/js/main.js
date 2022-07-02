@@ -1,3 +1,5 @@
+/* eslint-disable no-return-assign */
+/* eslint-disable no-param-reassign */
 import '../css/style.css';
 import jsonData from '../../data/data.json';
 
@@ -39,21 +41,21 @@ graphCells.forEach((el) => el.addEventListener('mouseover', () => {
   mouseOver(el);
 }));
 
-let isClicked = false;
-
 graphCells.forEach((el) => el.addEventListener('mouseleave', () => {
-  if (!isClicked) {
+  if (!el.isClicked) {
     mouseLeave(el);
   }
 }));
 
 graphCells.forEach((el) => el.addEventListener('click', () => {
+  graphCells.forEach((elem) => elem.isClicked = false);
+  el.isClicked = false;
   const calendarGraphic = el.querySelector('.calendar_graphic');
   if (calendarGraphic.classList.contains('is_clicked')) {
     calendarGraphic.classList.remove('is_clicked');
-    isClicked = false;
+    el.isClicked = false;
   } else {
     calendarGraphic.classList.add('is_clicked');
-    isClicked = true;
+    el.isClicked = true;
   }
 }));
