@@ -200,6 +200,7 @@
 
 .day {
   font-size: 25px;
+  color: var(--neutral-color_mediun-brown);
 }
 
 .graph_value {
